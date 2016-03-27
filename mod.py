@@ -2,6 +2,7 @@ import RPi.GPIO as gpio
 import picamera
 import time
 
+
 gpio.setmode(gpio.BCM)
 
 trig = 13

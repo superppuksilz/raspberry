@@ -6,7 +6,8 @@ class Ultrasonic:
 
     def __init__(self):
         distance = 0
-    def setDist():
+
+    def setDist(self):
         gpio.setmode(gpio.BCM)
         trig = 13
         echo = 19
@@ -29,16 +30,16 @@ class Ultrasonic:
 			        pulseEnd = time.time()
 
 		        pulseDuration = pulseEnd - pulseStart
-		        distance = pulseDuration * 170
-		        distance = round(distance, 2)			
+		        self.distance = pulseDuration * 170
+		        self.distance = round(self.distance, 2)			
 
 		        #print "Distance = ", distance, "m"
         except:
 	        gpio.cleanup()
 
 
-    def setDist():
-        return distance
+    def getDist(self):
+        return self.distance
 
 
 

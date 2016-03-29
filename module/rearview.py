@@ -7,14 +7,23 @@ class RearView:
     cam = camera.Camera()
     swit = switch.Switch()
 
-    def __init__():
+    def __init__(self):
         ultra = ultrasonic.Ultrasonic()
         cam = camera.Camera()
         swit = switch.Switch()
 
-    def showView():
+    def showView(self):
+        if(!swit.getStat()):
+            ultra.setDist()
+            dist = ultra.getDist()
+            if(dist < 4):
+                cam.showView(3)
+        else:
+            turnoffView()
+	
 
-    def turnoffView():
+    def turnoffView(self):
+        
         return 
 
 

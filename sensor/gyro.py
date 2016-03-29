@@ -6,8 +6,8 @@ class Gyro:
     def __init__(self):
         coordSet = coordinate.Coordinate()
         
-    def setCoord(x, y, z):
+    def setCoord(self, x, y, z):
         coordSet.setCoordinate(x, y, z)
-    def getCoord():
+    def getCoord(self):
         return coordSet
     

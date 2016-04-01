@@ -3,8 +3,8 @@ class Light:
 
     def __init__(self):
         value = 0.1
-    def setBright():
-        #need to fill
-    def getBright():
+    def setBright(self):
+        a=1
+    def getBright(self):
         return value
 		

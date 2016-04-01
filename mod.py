@@ -30,7 +30,7 @@ try:
 		pulseDuration = pulseEnd - pulseStart
 		distance = pulseDuration * 170
 		distance = round(distance, 2)
-		if distance < 1:
+		if distance < 0.7:
 			with picamera.PiCamera() as camera:
 				camera.start_preview()
 				time.sleep(5)

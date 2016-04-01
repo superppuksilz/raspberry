@@ -7,15 +7,16 @@ class FrontView:
     cam = camera.Camera()
     swit = switch.Switch()
 
-    def __init__():
+    def __init__(self):
         li = light.Light()
         cam = camera.Camera()
         swit = switch.Switch()
 
-    def showView():
+    def showView(self):
+        a = 1
 
-    def turnoffView():
-        return 
+    def turnoffView(self):
+        return aa
 
 
 		

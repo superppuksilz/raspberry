@@ -1,11 +1,11 @@
 import module.frontview as frontview
 import module.rearview as rearview
-import module.emergencty as emerency
+import module.emergency as emergency
 
-def __main__():
-        fv = frontview.FrontView()
-        rv = rearview.RearView()
-        emer = emergency.Emergency()
-        while True:
-                rv.showview()
+
+fv = frontview.FrontView()
+rv = rearview.RearView()
+emer = emergency.Emergency()
+while True:
+        rv.showView()
 		

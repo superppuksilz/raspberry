@@ -13,18 +13,18 @@ class RearView:
         swit = switch.Switch()
 
     def showView(self):
-        if(!swit.getStat()):
-            ultra.setDist()
-            dist = ultra.getDist()
-            if(dist < 4):
-                cam.showView(3)
+        if not self.swit.getStat():
+            self.ultra.setDist()
+            dist = self.ultra.getDist()
+            print dist
+            if(dist < 0.5):
+                self.cam.showView(3)
         else:
-            turnoffView()
+            self.turnoffView()
 	
 
     def turnoffView(self):
-        
-        return 
+        return aa
 
 
 		

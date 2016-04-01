@@ -16,24 +16,23 @@ class Ultrasonic:
         gpio.setup(echo, gpio.IN)
 
         try:
-	        while True:
-		        gpio.output(trig, False)
-		        time.sleep(0.5)
-		
-		        gpio.output(trig, True)
-		        time.sleep(0.00001)
-		        gpio.output(trig, False)
+	        gpio.output(trig, False)
+	        time.sleep(0.5)
+	
+	        gpio.output(trig, True)
+	        time.sleep(0.00001)
+	        gpio.output(trig, False)
+	        
+	        while gpio.input(echo) == 0:
+		        pulseStart = time.time()
+	        while gpio.input(echo) == 1:
+		        pulseEnd = time.time()
 
-		        while gpio.input(echo) == 0:
-			        pulseStart = time.time()
-		        while gpio.input(echo) == 1:
-			        pulseEnd = time.time()
+	        pulseDuration = pulseEnd - pulseStart
+	        self.distance = pulseDuration * 170
+	        self.distance = round(self.distance, 2)			
 
-		        pulseDuration = pulseEnd - pulseStart
-		        self.distance = pulseDuration * 170
-		        self.distance = round(self.distance, 2)			
-
-		        #print "Distance = ", distance, "m"
+	        #print "Distance = ", distance, "m"
         except:
 	        gpio.cleanup()
 

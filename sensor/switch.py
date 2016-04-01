@@ -5,7 +5,8 @@ class Switch:
         status = False
 
     def getStat(self):
-        return status
+        return self.status
 
     def changeStat(self):
+        a=1
 	

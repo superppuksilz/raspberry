@@ -7,11 +7,15 @@ class Emergency:
     cam = camera.Camera()
 
     def __init__(self):
+        status = False
+        gyro = gy.Gyro()
+        cam = camera.Camera()
 
-    def detectEmergency():
+    def detectEmergency(self):
+        a=1
 
-    def sendEmergency():
-
+    def sendEmergency(self):
+        a=1
 
 
 		

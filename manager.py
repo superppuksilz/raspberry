@@ -7,6 +7,6 @@ fv = frontview.FrontView()
 rv = rearview.RearView()
 emer = emergency.Emergency()
 while True:
-        rv.showView()
-        #fv.showView()
+        #rv.showView()
+        fv.showView()
 		

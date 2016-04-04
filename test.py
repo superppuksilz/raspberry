@@ -1,11 +1,9 @@
-import sensor.switch as switch
-import time
+import module.frontview as frontview
+import module.rearview as rearview
+import module.emergency as emergency
 
-sw = switch.Switch()
+fv = frontview.FrontView()
+
 while True:
-       time.sleep(0.5)
-       sw.checkStat()
-       print sw.getStat()
-       sw.changeStat()
- 
+       fv.showView()
 		

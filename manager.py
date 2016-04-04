@@ -8,4 +8,5 @@ rv = rearview.RearView()
 emer = emergency.Emergency()
 while True:
         rv.showView()
+        #fv.showView()
 		

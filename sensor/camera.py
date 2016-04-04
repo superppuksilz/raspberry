@@ -8,14 +8,13 @@ class Camera:
     def __init__(self):
         camera = 0
 
-    def showView(self, t):
+    def showView(self):
         with picamera.PiCamera() as camera:
 	    camera.start_preview()
-	    time.sleep(t)
-	    camera.stop_preview()
-
-    def turnoffView():
-        a = 1
+	    
+    def turnoffView(self):
+        with picamera.PiCamera() as camera:
+            camera.stop_preview()
 
     def caputurePic(self):
         a=1

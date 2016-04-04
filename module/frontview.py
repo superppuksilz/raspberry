@@ -13,7 +13,7 @@ class FrontView:
         swit = switch.Switch()
 
     def showView(self):
-        a = 1
+        self.li.setBright()
 
     def turnoffView(self):
         return aa

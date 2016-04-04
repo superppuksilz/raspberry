@@ -14,13 +14,13 @@ class RearView:
         cam = 0
         camStatus = 0
 
-    #need to seperate camera process and kill it when switch turns on
-
     def showView(self):
         self.swit.checkStat()
         self.ultra.setDist()
         dist = self.ultra.getDist()
         print dist
+
+        # if switch turns off, and distance less than 0.5 turn on the camera
         if not self.swit.getStat():
             if(dist < 0.5 and self.camStatus == 0):
                 cmd = ["python", "/home/pi/asdf/raspberry/sensor/camera.py"]

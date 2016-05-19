@@ -1,9 +1,7 @@
-import module.frontview as frontview
 import module.rearview as rearview
-import module.emergency as emergency
 
-fv = frontview.FrontView()
+rv = rearview.RearView()
 
 while True:
-       fv.showView()
+       rv.showView(0)
 		

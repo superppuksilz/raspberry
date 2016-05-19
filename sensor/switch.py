@@ -14,6 +14,7 @@ class Switch:
         return self.status
 
     def checkStat(self):
+       
         if GPIO.input(18) == False:
             print "switch on"
             if self.status == False:

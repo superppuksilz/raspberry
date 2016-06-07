@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 
+
 class Switch:
     status = False
 
@@ -7,7 +8,7 @@ class Switch:
         self.status = False
         
         GPIO.setmode(GPIO.BCM)
-        GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+        GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
         
 
     def getStat(self):
@@ -15,7 +16,7 @@ class Switch:
 
     def checkStat(self):
        
-        if GPIO.input(18) == False:
+        if GPIO.input(17) == False:
             print "switch on"
             if self.status == False:
                 self.status = True

@@ -22,18 +22,17 @@ class RearView:
 
         # if switch turns off, and distance less than 0.5 turn on the camera
         if not self.swit.getStat():
-            if(dist < 0.5 and self.camStatus == 0):
+            if(dist < 0.05 and self.camStatus == 0):
                 cmd = ["python", "/home/pi/rraspberry/sensor/camera.py"]
                 self.cam = subprocess.Popen(cmd, shell=False)
                 self.camStatus = 1
                 stat = 2
-                          
-                    
         else:
-            if self.camStatus == 1:
+            if self.cam != 0: 
                 self.cam.kill()
                 self.camStatus = 0
-                stat = 0
+                stat = 0 
+                
         self.swit.changeStat()
         return stat
 

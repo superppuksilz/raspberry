@@ -77,8 +77,11 @@ class ThreadHandler(Thread):
                     #print(status)
                 elif data[0] == 'w':
                     print data
-                    if data == 'wClear':
+                    if data == 'wRain':
                         weather = 1 
+                    else:
+                        weather = 2
+		    
                 elif data == '22':
 		    print(data)
                     self.sendMsgToAll(b"emer")
@@ -109,7 +112,11 @@ def set_status():
 
 def get_weather():
     return weather
-def set_weather():
+def set_weather(data):
+    global weather
+    weather = data
+
+def weather_off():
     global weather
     weather = 0
 
